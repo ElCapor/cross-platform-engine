@@ -1,0 +1,19 @@
+{
+    raylib = {
+        installdir = [[C:\Users\Administrator\Desktop\Raylib\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929]],
+        __enabled = true,
+        linkdirs = [[C:\Users\Administrator\Desktop\Raylib\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929\lib]],
+        sysincludedirs = [[C:\Users\Administrator\Desktop\Raylib\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929\include]],
+        __requirestr = "raylib",
+        envs = {
+            PATH = {
+                [[C:\Users\Administrator\Desktop\Raylib\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929\bin]],
+                [[C:\Users\Administrator\AppData\Local\.xmake\packages\c\cmake\3.26.4\4d23fc87455a4a1c819e093bd8456f0f\bin]]
+            }
+        },
+        version = "latest",
+        static = true,
+        libfiles = [[C:\Users\Administrator\Desktop\Raylib\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929\lib\raylib.lib]],
+        links = "raylib"
+    }
+}

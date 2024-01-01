@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Administrator\Desktop\Raylib\cross-platform-engine\build\.packages\r\raylib\latest\cache\build_8574311f\CMakeFiles\cdbbeaf86c20eacc86609ee158981890\uninstall.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Administrator\Desktop\Raylib\cross-platform-engine\raylib\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Administrator\Desktop\Raylib\cross-platform-engine\build\.packages\r\raylib\latest\cache\build_8574311f\CMakeFiles\uninstall" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{FA866DCB-4CEF-3D6F-B432-EF9E5BAE6EFC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
