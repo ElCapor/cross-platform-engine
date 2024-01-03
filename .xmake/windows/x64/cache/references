@@ -1,5 +1,7 @@
 {
     packages = {
-        [[C:\Users\Administrator\Desktop\Raylib\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929]]
+        [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929]],
+        [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\5.x\8574311f4b544fa89a3d8c3ee79d1929]],
+        [[C:\Users\HP\AppData\Local\.xmake\packages\r\raygui\latest\3599f6b167d844bb97300d9682a51c11]]
     }
 }
