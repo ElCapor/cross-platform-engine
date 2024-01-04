@@ -134,6 +134,11 @@ add_requires("asio")
 add_requires("rmlui")
 --add_requires("lua") broken
 
+rule("copy_resources")
+    on_build(function (target) 
+        os.cp(path.join(os.scriptdir(), "res"), path.join(target:targetdir(), "res"))
+    end)
+
 target("cross-platform-engine") do
 	target("cross-platform-engine") do
 	set_kind("binary")
@@ -150,7 +155,6 @@ target("cross-platform-engine") do
     add_files("lua/*.c|lua.c|onelua.c")
     add_headerfiles("lua/*.h")
 
-
     -- raylib links
     if is_plat("macosx") then
         add_frameworks("CoreVideo", "CoreGraphics", "AppKit", "IOKit", "CoreFoundation", "Foundation")
@@ -160,5 +164,9 @@ target("cross-platform-engine") do
         add_syslinks("pthread", "dl", "m")
         add_deps("libx11", "libxrandr", "libxrender", "libxinerama", "libxcursor", "libxi", "libxfixes", "libxext")
     end
+
+
+    -- copy resources to bin
+    add_rules("copy_resources")
 end
 end
