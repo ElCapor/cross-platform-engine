@@ -1,12 +1,11 @@
 {
     cmdlines = {
-        [[xmake l c:\Users\HP\.vscode\extensions\tboox.xmake-vscode-2.2.8\assets\update_intellisense.lua .vscode clangd]],
         [[xmake l c:\Users\HP\.vscode\extensions\tboox.xmake-vscode-2.2.8\assets\explorer.lua]],
         [[xmake l c:\Users\HP\.vscode\extensions\tboox.xmake-vscode-2.2.8\assets\default_target.lua]],
+        [[xmake l c:\Users\HP\.vscode\extensions\tboox.xmake-vscode-2.2.8\assets\config.lua]],
+        "xmake check",
         "xmake -w",
-        [[xmake lua "C:\\\\Program Files\\\\xmake\\\\actions\\\\build\\\\cleaner.lua"]],
-        "xmake run cross-platform-engine",
         [[xmake l c:\Users\HP\.vscode\extensions\tboox.xmake-vscode-2.2.8\assets\explorer.lua]],
-        "xmake check"
+        "xmake run cross-platform-engine"
     }
 }

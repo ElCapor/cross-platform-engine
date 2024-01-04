@@ -1,33 +1,7 @@
 {
-    raygui = {
-        __requirestr = "raygui",
-        linkdirs = [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\5.x\8574311f4b544fa89a3d8c3ee79d1929\lib]],
-        license = "zlib",
-        envs = {
-            PATH = {
-                [[C:\Users\HP\AppData\Local\.xmake\packages\r\raygui\latest\3599f6b167d844bb97300d9682a51c11\bin]],
-                [[C:\Users\HP\AppData\Local\.xmake\packages\c\cmake\3.28.1\a8d422a1b2544979b708dc5b523354d3\bin]],
-                [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\5.x\8574311f4b544fa89a3d8c3ee79d1929\bin]]
-            }
-        },
-        version = "latest",
-        links = "raylib",
-        sysincludedirs = {
-            [[C:\Users\HP\AppData\Local\.xmake\packages\r\raygui\latest\3599f6b167d844bb97300d9682a51c11\include]],
-            [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\5.x\8574311f4b544fa89a3d8c3ee79d1929\include]]
-        },
-        libfiles = [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\5.x\8574311f4b544fa89a3d8c3ee79d1929\lib\raylib.lib]],
-        installdir = [[C:\Users\HP\AppData\Local\.xmake\packages\r\raygui\latest\3599f6b167d844bb97300d9682a51c11]],
-        __enabled = true
-    },
     raylib = {
-        __requirestr = "raylib",
-        linkdirs = [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929\lib]],
-        static = true,
         version = "latest",
-        links = "raylib",
-        sysincludedirs = [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929\include]],
-        installdir = [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929]],
+        linkdirs = [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929\lib]],
         libfiles = [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929\lib\raylib.lib]],
         envs = {
             PATH = {
@@ -35,18 +9,44 @@
                 [[C:\Users\HP\AppData\Local\.xmake\packages\c\cmake\3.28.1\a8d422a1b2544979b708dc5b523354d3\bin]]
             }
         },
-        __enabled = true
+        __requirestr = "raylib",
+        static = true,
+        sysincludedirs = [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929\include]],
+        installdir = [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\latest\8574311f4b544fa89a3d8c3ee79d1929]],
+        __enabled = true,
+        links = "raylib"
     },
     asio = {
+        version = "latest",
+        license = "BSL-1.0",
+        __requirestr = "asio",
         envs = {
             PATH = {
                 [[C:\Users\HP\AppData\Local\.xmake\packages\a\asio\latest\10253c39aca14760ae4382272800b680\bin]]
             }
         },
-        version = "latest",
         __enabled = true,
-        __requirestr = "asio",
-        installdir = [[C:\Users\HP\AppData\Local\.xmake\packages\a\asio\latest\10253c39aca14760ae4382272800b680]],
-        license = "BSL-1.0"
+        installdir = [[C:\Users\HP\AppData\Local\.xmake\packages\a\asio\latest\10253c39aca14760ae4382272800b680]]
+    },
+    raygui = {
+        version = "latest",
+        linkdirs = [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\5.x\8574311f4b544fa89a3d8c3ee79d1929\lib]],
+        license = "zlib",
+        libfiles = [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\5.x\8574311f4b544fa89a3d8c3ee79d1929\lib\raylib.lib]],
+        envs = {
+            PATH = {
+                [[C:\Users\HP\AppData\Local\.xmake\packages\r\raygui\latest\3599f6b167d844bb97300d9682a51c11\bin]],
+                [[C:\Users\HP\AppData\Local\.xmake\packages\c\cmake\3.28.1\a8d422a1b2544979b708dc5b523354d3\bin]],
+                [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\5.x\8574311f4b544fa89a3d8c3ee79d1929\bin]]
+            }
+        },
+        __requirestr = "raygui",
+        sysincludedirs = {
+            [[C:\Users\HP\AppData\Local\.xmake\packages\r\raygui\latest\3599f6b167d844bb97300d9682a51c11\include]],
+            [[C:\Users\HP\Documents\GitHub\cross-platform-engine\build\.packages\r\raylib\5.x\8574311f4b544fa89a3d8c3ee79d1929\include]]
+        },
+        installdir = [[C:\Users\HP\AppData\Local\.xmake\packages\r\raygui\latest\3599f6b167d844bb97300d9682a51c11]],
+        __enabled = true,
+        links = "raylib"
     }
 }
