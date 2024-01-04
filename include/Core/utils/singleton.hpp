@@ -1,11 +1,12 @@
 #ifndef SINGLETON_HPP
 #define SINGLETON_HPP
+
 template <typename T>
 class Singleton {
 public:
-    static T& getInstance() {
+    static T* getInstance() {
         static T instance; // This will be created only once
-        return instance;
+        return &instance;
     }
 
     // Delete copy constructor and assignment operator to prevent duplication
@@ -16,4 +17,5 @@ protected:
     Singleton() = default;
     virtual ~Singleton() = default;
 };
+
 #endif

@@ -1,22 +1,15 @@
 #ifndef GAME_HPP
 /*
 
-Rewrite of the Game System attempt n°3
+Rewrite of the Game System attempt n�2
 
 */
 #include <raylib.h>
-#include <Core/Game/Scene.hpp>
-#include <memory>
-class SceneManager 
-{
-    Scene* head; // head of the linked list
-    Scene* selected; // selected scene
-}
+#include "SceneManager.hpp"
+#include <Core/Raylib/RaylibAssert.h>
 
 // Abstract game class
 class Game {
-public:
-    std::unique_ptr<SceneManager> m_SceneManager;
 public:
 	int m_Width;
 	int m_Height;
@@ -25,23 +18,26 @@ public:
 
 	virtual void OnLoad() // on game load
 	{
+		m_SceneManager = SceneManager::getInstance();
+		Assert(m_SceneManager != nullptr, "SceneManager was null");
+
 		InitWindow(m_Width, m_Height, m_Name);
 		SetTargetFPS(60);
 
-		//Assert(IsWindowReady(), "Failed to create window !");
+		Assert(IsWindowReady(), "Failed to create window !");
 	}
 
 	virtual void OnExit() // on exit
 	{
 		// no asserts because the game wouldnt load at first if there was no scenes
-		head->OnExit();
+		m_SceneManager->m_CurrentScene->OnExit();
 		CloseWindow();
 	}
 
 	virtual void OnUpdate() // on update 
 	{
 		// add the scene system here
-		->OnUpdate();
+		m_SceneManager->m_CurrentScene->OnUpdate();
 	}
 
 	virtual void OnDraw() // on draw
@@ -75,6 +71,6 @@ public:
 		m_SceneManager->m_CurrentScene->OnEnter();
 	}
 
-	std::unique_ptr<SceneManager> m_SceneManager;
+	SceneManager* m_SceneManager;
 };
 #endif // !GAME_HPP
