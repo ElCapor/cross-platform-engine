@@ -7,9 +7,6 @@
 [submodule "lua"]
 	path = 3rdparty/lua
 	url = https://github.com/lua/lua.git
-[submodule "asio"]
-	path = 3rdparty/asio
-	url = https://github.com/chriskohlhoff/asio.git
 [submodule "RmlUi"]
 	path = 3rdparty/RmlUi
 	url = https://github.com/mikke89/RmlUi.git
