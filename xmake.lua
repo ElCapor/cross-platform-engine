@@ -130,6 +130,8 @@ package_end()
 add_requires("raylib")
 add_requires("raygui")
 add_requires("asio")
+-- no need to submodule in repo since ill pr to have 5.1
+add_requires("rmlui")
 --add_requires("lua") broken
 
 target("cross-platform-engine") do
@@ -141,6 +143,7 @@ target("cross-platform-engine") do
 	add_packages("raylib")
     add_packages("raygui")
     add_packages("asio")
+    add_packages("rmlui")
 
     --add_packages("lua")
     -- fix here
