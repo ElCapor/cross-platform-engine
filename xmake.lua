@@ -1,5 +1,8 @@
 add_rules("mode.debug", "mode.release")
 
+local function get_dep_folder(name) 
+    return path.join(path.join(os.scriptdir(), "3rdparty"), name)
+end
 
 --[[
  ######     #    #     # #       ### ######  
@@ -12,7 +15,7 @@ add_rules("mode.debug", "mode.release")
 --]]
 package("raylib")
     add_deps("cmake")
-    set_sourcedir(path.join(os.scriptdir(), "raylib"))
+    set_sourcedir(get_dep_folder("raylib"))
     on_install(function (package)
         local configs = {}
 			table.insert(configs, "-DCMAKE_BUILD_TYPE=" .. (package:debug() and "Debug" or "Release"))
@@ -37,6 +40,7 @@ package("raygui")
     set_homepage("https://github.com/raysan5/raygui")
     set_description("A simple and easy-to-use immediate-mode gui library")
     set_license("zlib")
+    set_sourcedir(get_dep_folder("raygui"))
     add_deps("raylib 5.x")
     add_configs("implemention", { description = "Define implemention.", default = false, type = "boolean"})
 
@@ -47,7 +51,7 @@ package("raygui")
     end)
 
     on_install("windows", "linux", "macosx", function (package)
-        os.cp("src/*", package:installdir("include"))
+        os.cp(get_dep_folder("raygui").."/src/*", package:installdir("include"))
     end)
 package_end()
 
@@ -69,9 +73,9 @@ package("asio")
     set_license("BSL-1.0")
 
     on_install(function (package)
-        if os.isdir("asio") then
-            os.cp("asio/include/asio.hpp", package:installdir("include"))
-            os.cp("asio/include/asio", package:installdir("include"))
+        if os.isdir(get_dep_folder("asio")) then
+            os.cp(get_dep_folder("asio").."/include/asio.hpp", package:installdir("include"))
+            os.cp(get_dep_folder("asio").."/include/asio", package:installdir("include"))
         end
     end)
 package_end()
@@ -89,14 +93,14 @@ package_end()
 -- yes i could just have done add_requires lua and expect xmake to do everything , but why not learn a bit more ?
 -- this is broken for now
 package("lua")
-    local sourcedir = "lua/"
+    local sourcedir = get_dep_folder("lua")
     local kind = "static"
     target("lualib")
         set_kind(kind)
         set_basename("lua")
-        add_headerfiles(sourcedir .. "*.h", {prefixdir = "lua"})
+        add_headerfiles(sourcedir .. "/*.h", {prefixdir = "lua"})
         --add_headerfiles(sourcedir .. "lua.hpp", {prefixdir = "lua"})
-        add_files(sourcedir .. "*.c|lua.c|onelua.c")
+        add_files(sourcedir .. "/*.c|lua.c|onelua.c")
         add_defines("LUA_COMPAT_5_2", "LUA_COMPAT_5_1")
         if is_plat("linux", "bsd", "cross") then
             add_defines("LUA_USE_LINUX")
@@ -152,8 +156,8 @@ target("cross-platform-engine") do
 
     --add_packages("lua")
     -- fix here
-    add_files("lua/*.c|lua.c|onelua.c")
-    add_headerfiles("lua/*.h")
+    add_files(get_dep_folder("lua").."/*.c|lua.c|onelua.c")
+    add_headerfiles(get_dep_folder("lua").."/*.h")
 
     -- raylib links
     if is_plat("macosx") then
