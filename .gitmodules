@@ -1,15 +1,15 @@
 [submodule "raylib"]
-	path = raylib
+	path = 3rdparty/raylib
 	url = https://github.com/raysan5/raylib.git
 [submodule "raygui"]
-	path = raygui
+	path = 3rdparty/raygui
 	url = https://github.com/raysan5/raygui.git
 [submodule "lua"]
-	path = lua
+	path = 3rdparty/lua
 	url = https://github.com/lua/lua.git
 [submodule "asio"]
-	path = asio
+	path = 3rdparty/asio
 	url = https://github.com/chriskohlhoff/asio.git
 [submodule "RmlUi"]
-	path = RmlUi
+	path = 3rdparty/RmlUi
 	url = https://github.com/mikke89/RmlUi.git
