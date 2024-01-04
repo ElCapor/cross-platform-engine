@@ -1,4 +1,15 @@
 add_rules("mode.debug", "mode.release")
+
+
+--[[
+ ######     #    #     # #       ### ######  
+ #     #   # #    #   #  #        #  #     # 
+ #     #  #   #    # #   #        #  #     # 
+ ######  #     #    #    #        #  ######  
+ #   #   #######    #    #        #  #     # 
+ #    #  #     #    #    #        #  #     # 
+ #     # #     #    #    ####### ### ######  
+--]]
 package("raylib")
     add_deps("cmake")
     set_sourcedir(path.join(os.scriptdir(), "raylib"))
@@ -10,6 +21,17 @@ package("raylib")
         end)
 package_end()
 
+
+--[[
+ ######     #    #     #  #####  #     # ### 
+ #     #   # #    #   #  #     # #     #  #  
+ #     #  #   #    # #   #       #     #  #  
+ ######  #     #    #    #  #### #     #  #  
+ #   #   #######    #    #     # #     #  #  
+ #    #  #     #    #    #     # #     #  #  
+ #     # #     #    #     #####   #####  ### 
+                                             
+--]]
 package("raygui")
     set_kind("library", {headeronly = true})
     set_homepage("https://github.com/raysan5/raygui")
@@ -29,8 +51,63 @@ package("raygui")
     end)
 package_end()
 
+
+--[[
+    #     #####  ### ####### 
+   # #   #     #  #  #     # 
+  #   #  #        #  #     # 
+ #     #  #####   #  #     # 
+ #######       #  #  #     # 
+ #     # #     #  #  #     # 
+ #     #  #####  ### ####### 
+                             
+--]]
+package("asio")
+    set_kind("library", {headeronly = true})
+    set_homepage("http://think-async.com/Asio/")
+    set_description("Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.")
+    set_license("BSL-1.0")
+
+    on_install(function (package)
+        if os.isdir("asio") then
+            os.cp("asio/include/asio.hpp", package:installdir("include"))
+            os.cp("asio/include/asio", package:installdir("include"))
+        end
+    end)
+package_end()
+
+--[[
+ #       #     #    #    
+ #       #     #   # #   
+ #       #     #  #   #  
+ #       #     # #     # 
+ #       #     # ####### 
+ #       #     # #     # 
+ #######  #####  #     # 
+                         
+--]]
+-- yes i could just have done add_requires lua and expect xmake to do everything , but why not learn a bit more ?
+package("lua")
+
+
+
+package_end()
+
+
+
+--[[
+ ######  ### #     #    #    ######  #     # 
+ #     #  #  ##    #   # #   #     #  #   #  
+ #     #  #  # #   #  #   #  #     #   # #   
+ ######   #  #  #  # #     # ######     #    
+ #     #  #  #   # # ####### #   #      #    
+ #     #  #  #    ## #     # #    #     #    
+ ######  ### #     # #     # #     #    #    
+                                             
+--]]
 add_requires("raylib")
 add_requires("raygui")
+add_requires("asio")
 
 target("cross-platform-engine") do
 	target("cross-platform-engine") do
@@ -38,9 +115,10 @@ target("cross-platform-engine") do
 	set_optimize("fastest")
     add_files("src/*.cpp")
     add_headerfiles("include/*.h")
-    
+
 	add_packages("raylib")
     add_packages("raygui")
+    add_packages("asio")
 
     if is_plat("macosx") then
         add_frameworks("CoreVideo", "CoreGraphics", "AppKit", "IOKit", "CoreFoundation", "Foundation")
