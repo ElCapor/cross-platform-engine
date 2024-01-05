@@ -1,1 +1,0 @@
-C:\Users\Administrator\Desktop\Raylib\cross-platform-engine\build\.packages\r\raylib\latest\cache\build_8574311f\raylib\external\glfw\src\glfw.dir\Release\glfw.lib

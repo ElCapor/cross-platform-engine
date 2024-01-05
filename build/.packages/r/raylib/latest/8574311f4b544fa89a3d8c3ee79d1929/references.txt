@@ -1,4 +1,0 @@
-{
-    ["C:\\Users\\Administrator\\Desktop\\Raylib\\cross-platform-engine"] = "240101",
-    ["C:\\Users\\HP\\Documents\\GitHub\\cross-platform-engine"] = "240104"
-}

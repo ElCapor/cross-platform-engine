@@ -1,7 +1,0 @@
-C:/Users/Administrator/Desktop/Raylib/cross-platform-engine/build/.packages/r/raylib/latest/8574311f4b544fa89a3d8c3ee79d1929/lib/raylib.lib
-C:/Users/Administrator/Desktop/Raylib/cross-platform-engine/build/.packages/r/raylib/latest/8574311f4b544fa89a3d8c3ee79d1929/include/raylib.h
-C:/Users/Administrator/Desktop/Raylib/cross-platform-engine/build/.packages/r/raylib/latest/8574311f4b544fa89a3d8c3ee79d1929/include/rlgl.h
-C:/Users/Administrator/Desktop/Raylib/cross-platform-engine/build/.packages/r/raylib/latest/8574311f4b544fa89a3d8c3ee79d1929/include/raymath.h
-C:/Users/Administrator/Desktop/Raylib/cross-platform-engine/build/.packages/r/raylib/latest/8574311f4b544fa89a3d8c3ee79d1929/lib/pkgconfig/raylib.pc
-C:/Users/Administrator/Desktop/Raylib/cross-platform-engine/build/.packages/r/raylib/latest/8574311f4b544fa89a3d8c3ee79d1929/lib/cmake/raylib/raylib-config-version.cmake
-C:/Users/Administrator/Desktop/Raylib/cross-platform-engine/build/.packages/r/raylib/latest/8574311f4b544fa89a3d8c3ee79d1929/lib/cmake/raylib/raylib-config.cmake
