@@ -1,4 +1,0 @@
-error: please run `$xmake build [target]` to build the following targets first:
-  -> cross-platform-engine
-warning: .\xmake.lua:17: cannot match add_files("Core\src\**\*.cpp") in target(cross-platform-engine)
-warning: add -v for getting more warnings ..
